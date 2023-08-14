@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <a class="screen-reader-text" href="#content">Skip to content</a>
+
+    {{ partial "header.html" . }}
+
+    <main id="content" class="content pt-5">
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div id="community" class="row justify-content-between">
+                    <div class="col-lg-5 col-12 mb-4">
+                        <h2>Get in touch</h2>
+                        <p>The Icarus Project is nothing without its community. We think that constant communication with journalists, researchers and tech practitioners in a specific political context allows us to better know and respond to what is happening around us. As such, we would like to hear from you about your problems, your solutions, your thoughts on where to take this project. Get in touch with us so that you can become part of the Icarus Project.</p>
+                        <a href="mailto:info@fightcensorship.tech">info@fightcensorship.tech {{ partial "fontawesome.html" "solid/arrow-right" }}</a>
+                    </div>
+                    <div class="col-lg-5 col-12 mb-4">
+                        <h2>Make Icarus Project documentation available in your language</h2>
+                        <p>Want to make the Icarus Project documentation guides available in your language? We would greatly appreciate the help to bring the project to the attention of other communities. If you hit a snag, we would be happy to go over any technical details of translation. And once things are done, feel free to reach out so that we can post the guides here on our site and on our social media.</p>
+                        <a href="#">Link here {{ partial "fontawesome.html" "solid/arrow-right" }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid py-5 background-gray-50">
+            <div class="container">
+                <div id="connect" class="row justify-content-between">
+                    <div class="col-lg-5 col-12 mb-lg-0 mb-5">
+                        <h2>Learn and Connect</h2>
+                        <p class="mb-5">Using or want to use Icarus Project? You can engage with us on following channels as well:</p>
+                        <a href="https://matrix.to/#/%23icarusproject:matrix.org" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html" "solid/message-dots" }} Matrix Channel</a>
+                        <a href="https://twitter.com/IcarusProject0" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html" "brands/twitter" }} Twitter</a>
+                        <a href="https://mastodon.online/web/accounts/41742" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html" "brands/mastodon" }} Mastodon</a>
+                    </div>
+                    <div class="col-lg-5 col-12 mb-lg-0 mb-5">
+                        <h2>Develop and Contribute</h2>
+                        <p class="mb-5">If you want to get more involved by contributing to Icarus Project, join us here:</p>
+                        <a href="https://github.com/icaruslab" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html" "brands/github" }} GitHub</a>
+                        <a href="mailto:info@fightcensorship.tech" rel="noopener noreferrer">{{ partial "fontawesome.html" "solid/envelope" }} Email</a>
+                        <a href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x8982de90bb823122bed49ba7b055b6a6adf40cda" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html" "solid/key" }} GPG Key</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    {{ block "footer" . }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
+</body>
+
+</html>

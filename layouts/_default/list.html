@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main class="post py-5">
+  <div class="container-fluid">
+        <div class="container">
+          <div class="row py-4">
+              {{ range .Pages }}
+              <div class="col-xl-4 col-lg-12 col-12 pb-4">
+                  <a class="title mt-3 mb-0" href="{{ .Permalink }}">{{ .Title }}</a>
+              </div>
+              {{ end }}
+          </div>
+      </div>
+  </div>
+</main>
+{{ end }}

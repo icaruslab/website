@@ -1,0 +1,15 @@
+<footer class="container-fluid background-blue-800 text-white py-5">
+    <div class="container">      
+      <div class="row">
+        <div class="col-lg-9 col-12 mb-xl-0 mb-4">
+          <p class="mb-0">© {{ now.Year }} {{ .Site.Copyright | markdownify }}</p>
+        </div>
+        <div class="col-lg-3 col-12 d-flex justify-content-lg-end">
+          {{- with .Site.Params.social }}
+          {{ partial "social-icons.html" . }}
+          {{- end }}
+        </div>
+      </div>      
+    </div>
+</footer>
+{{ partial "javascript.html" . }}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <a class="screen-reader-text" href="#content">Skip to content</a>
+
+    {{ partial "header.html" . }}
+
+    <div id="content" class="content py-5">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <aside class="col-12 col-md-4 col-xl-3">
+                        {{ partial "sidebar.html" . }}
+                    </aside>
+                    <main class="col-12 col-md-8 col-xl-9" role="main">
+                        {{ partial "breadcrumb.html" . }}
+                        {{ partial "reading-time.html" . }}
+                        <h1>{{ .Title }}</h1>
+                        {{ .Content }}
+                        <hr>
+                        {{ block "main" . }}{{ end }}
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ block "footer" . }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
+</body>
+
+</html>

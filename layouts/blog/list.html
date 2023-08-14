@@ -1,0 +1,27 @@
+{{ define "main" }}
+<main class="post py-5">
+    <div class="container-fluid">
+        <div class="container">
+
+            <h1>Blog</h1>
+
+            {{- if .Content }}
+            <div class="content">{{ .Content }}</div>
+            {{- end }}
+
+            <div class="row py-3">
+                {{- range (where .Site.RegularPages "Type" "blog") }}
+                <div class="col-xl-4 col-lg-12 col-12">
+                    <article class="card">
+                        <img class="mb-3" src="{{ .Site.BaseURL }}{{ .Params.image }}" width="368px" height="276px" alt="{{ .Title }}" loading="lazy">
+                        <p class="info mb-1">{{ .Page.ReadingTime }} min read / <strong><time datetime="{{ .Date.Format .Site.Params.dateform }}">{{ .Date.Format .Site.Params.dateform }}</time></strong></p>
+                        <a class="title mb-2 stretched-link" href="{{ .Permalink }}">{{ .Title }}</a>
+                        <p class="description mb-0">{{ .Summary | truncate 200 }}</p>
+                    </article>
+                </div>
+                {{- end }}
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}

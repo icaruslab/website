@@ -1,0 +1,5 @@
+{{ range . -}}
+{{ $name := .name }}
+{{ $path := printf "%s" $name | printf "%s%s" "brands/" }}
+<a href="{{ .url }}" target="_blank" rel="noopener" title="{{ .name | humanize }}" aria-label="Icarus project on {{ .name | humanize }}">{{ partial "fontawesome.html" $path }}</a>
+{{- end -}}

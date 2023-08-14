@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <a class="screen-reader-text" href="#content">Skip to content</a>
+
+    {{ partial "header.html" . }}
+
+    <main id="content" class="content py-5">
+        <div class="container-fluid background-logo py-5">
+            <div class="container">
+                <div id="about" class="row justify-content-start">
+                    <h2>{{ partial "fontawesome.html" "solid/book-bookmark" }} What brought us here</h2>
+                    <div class="col-lg-4 col-12 mb-xl-4 mb-0">
+                        <p>In 2017, the Egyptian government blocked access to 21 websites on local ISPs, the first step in what would become an aggressive and far reaching censorship campaign targeting most prominently independent media outlets, rights organizations and any tool or publishing platform that would allow access to information that ran counter to state control.</p>
+                        <p>The Icarus project emerged out of the fledgling research and direct technical support provided to a variety of institutions in the space of this unprecedented state-led censorship campaign.</p>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4 col-12 mb-4">
+                        <p>There was initially promising results in both research and technical support, but the Icarus project was born as a full time venture in order to consolidate and systematize efforts to test not only our own proposed solutions but those of other institutions and practitioners in the field of digital security in Egypt.</p>
+                        <p>Now, the Icarus project has ambitions to extend beyond Egypt's borders, widening its community of tech practitioners and publishers to think how to move beyond the current restrictive internet environment together.</p>
+                        <a href="#">Link here {{ partial "fontawesome.html" "solid/arrow-right" }}</a>
+                    </div>
+
+                    <h2>{{ partial "fontawesome.html" "solid/toolbox" }} How we work</h2>
+                    <div class="col-lg-4 col-12">
+                        <p>We at the Icarus project fully believe in collective efforts to overcome the stifling of political life. We are not interested in providing our readers with solutions designed in some faraway place. We work and live among the people we are thinking with and invite our community — journalists, researchers, tech workers —  to actively participate in all aspects of the project.</p>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4 col-12">
+                        <p>That participation can be small — sending in a beta censorship solution to be documented and tested — or it can be big — forking our documented code to take it in another, unthought of direction.</p>
+                        <p>Our guiding ethos stems from a belief that only by coming together can we begin to grasp what is happening all around us.</p>
+                        <a href="#">Link here {{ partial "fontawesome.html" "solid/arrow-right" }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {{ partial "cta.html" . }}
+
+    {{ block "footer" . }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
+</body>
+
+</html>

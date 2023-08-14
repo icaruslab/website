@@ -1,0 +1,58 @@
+{{ if .IsHome }}
+<header class="background-header">
+
+    {{ if len .Site.Menus }}
+    {{ partial "menu.html" . }}
+    {{ end }}
+
+    <div class="container-fluid py-5">
+        <div class="container py-lg-5 py-0">
+            <div class="row home justify-content-center align-items-center py-lg-5 py-0">
+                <div class="col-xl-8 col-12 mb-xl-0 mb-5 text-center">
+                    <h1>Code to fight censorship</h1>
+                    <p>Online repositories and resources to circumvent censorship.</p>
+                    <p class="mb-5">Get your site live again.</p>
+                    <a class="button-cta" href="/docs/getting-started/">Explore Icarus</a>
+                    <a class="button-ghost ms-3" href="https://github.com/icaruslab">GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+{{ else if or (eq .Page.Type "blog") (eq .Page.Type "docs") }}
+
+<header class="background-head">
+
+    {{ if len .Site.Menus }}
+    {{ partial "menu.html" . }}
+    {{ end }}
+
+</header>
+
+{{ else }}
+
+<header class="background-head">
+
+    {{ if len .Site.Menus }}
+    {{ partial "menu.html" . }}
+    {{ end }}
+
+</header>
+
+<div class="container-fluid">
+    <div class="container pt-5 top-bar px-xl-0 px-2">
+        <h1 class="page-title background-white d-inline-block mb-0 pt-2 pe-3">{{ .Title | markdownify }}</h1>
+    </div>
+    <div class="container pt-3 px-xl-0 px-2">
+        <div class="row">
+            <div class="col-lg-7 col-12">
+                <p class="page-subtitle mb-0">{{ .Page.Params.subtitle | markdownify }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{ end }}

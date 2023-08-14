@@ -1,0 +1,10 @@
+{{ $main := resources.Get "js/main.js" }}
+{{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+{{ $secureJS := slice $main $bootstrap | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha256" }}
+<script src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+
+{{ range $val := $.Site.Params.customJS }}
+{{ if gt (len $val) 0 }}
+<script src="{{ $val }}"></script>
+{{ end }}
+{{ end }}

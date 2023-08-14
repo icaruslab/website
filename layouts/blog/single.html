@@ -1,0 +1,42 @@
+{{ define "main" }}
+<main class="post">
+    <div class="container-fluid pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-7 col-md-12 col-12 pt-5">
+                    <article>
+                        <h1 class="post-title">{{ .Title | markdownify }}</h1>
+
+                        <div class="d-flex flex-lg-row flex-column">
+                            <p class="mb-1">{{ partial "fontawesome.html" "solid/user-pen" }}
+                                {{ range .Param "authors" }}
+                                {{ $name := . }}
+                                {{ $path := printf "/%s/%s" "authors" ($name | urlize) }}
+                                {{ with $.Site.GetPage $path }}
+                                <span class="mb-0">{{ .Params.name }}</span>
+                                {{ end }}
+                                {{ end }}
+                            </p>
+                            <p id="reading-date" class="mb-1 ms-0 ms-lg-5">{{ partial "fontawesome.html" "solid/calendar-days" }} <time datetime="{{ .Date.Format .Site.Params.dateform }}">{{ .Date.Format .Site.Params.dateform }}</time></p>
+                            <p id="reading-time" class="mb-3 ms-0 ms-lg-5">{{ partial "fontawesome.html" "solid/timer" }} {{ .Page.ReadingTime }} min read</p>
+                        </div>
+
+                        {{- if .Params.toc }}
+                        <hr />
+                        <aside id="toc">
+                            <div class="toc-title">{{ i18n "tableOfContents" }}</div>
+                            {{ .TableOfContents }}
+                        </aside>
+                        <hr />
+                        {{- end }}
+                
+                        <div class="post-content">
+                            {{ .Content | safeHTML }}
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}
