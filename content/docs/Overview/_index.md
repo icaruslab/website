@@ -43,4 +43,4 @@ One big concern would be the user's physical security issue as in some oppressiv
 ### Collateral freedom!
 In the context of Internet censorship circumvention, [Collateral freedom](https://en.wikipedia.org/wiki/Collateral_freedom) concept can be described as increasing the economical, political, and technical costs of Internet censorship by using crucial and big cloud services providers, and utilizing modern web encryption protocols to ultimately force censors in a situation where they can't block the content, without breaking or completely blocking access to crucial cloud services.
 
-* [Getting Started](/docs/getting-started.html): Get started with Icarus Project
+* [Getting Started](/docs/getting-started): Get started with Icarus Project

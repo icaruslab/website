@@ -1,6 +1,7 @@
 baseURL = '/'
 title = 'Icarus Project'
-
+relativeURLs = true
+uglyURLs = false
 defaultContentLanguage = "en"
 languageCode = 'en-us'
 

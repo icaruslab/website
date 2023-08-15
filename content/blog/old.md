@@ -4,7 +4,7 @@ title: "Introducing Icarus Project"
 linkTitle: "Introducing Icarus Project"
 description: "An online repository for documented Internet censorship circumvention techniques and methods."
 authors : ["icarus"]
-image : "/img/misc/avatar_darkmode.png"
+image : "img/misc/avatar_darkmode.png"
 categories : ["article"]
 ---
 
